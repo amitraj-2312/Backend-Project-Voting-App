@@ -15,6 +15,11 @@ const candidateRoutes = require('./routes/candidateRoutes');
 app.use('/user', userRoutes);
 app.use('/candidate', candidateRoutes);
 
+// ✅ ADD THIS
+app.get("/", (req, res) => {
+  res.send("Voting App Backend is running 🚀");
+});
+
 
 app.listen(PORT, ()=>{
     console.log('listening on port 3000');
